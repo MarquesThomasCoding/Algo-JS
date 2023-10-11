@@ -86,5 +86,8 @@ if(Tueur.ptsVie <= 0) {
 }
 
 else {
-    console.log("Jason a gagné.")
+    console.log("Jason a gagné. Les morts sont : ")
+    Survivants.forEach((survivant) => {
+        if(survivant.mort) console.log(survivant.prenom + ", ")
+    })
 }

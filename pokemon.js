@@ -19,19 +19,20 @@ class Pokemon {
     }
 }
 
-pokemon1 = new Pokemon("Pikachu", 55, 40, 35, 0.3)
-pokemon2 = new Pokemon("Tortank", 45, 45, 40, 0.4)
+pokemon1 = new Pokemon("Pikachu", 30, 25, 30, 0.5)
+pokemon2 = new Pokemon("Tortank", 30, 25, 30, 0.4)
 
 
 
 while(pokemon1.hp > 0 && pokemon2.hp > 0) {
     console.log(pokemon1.name + " attaque " + pokemon2.name)
-    if(pokemon1.isLucky()) pokemon1.attackPokemon(pokemon2)
-    else console.log(pokemon1.name + " n'a pas de chance.")
+
+    pokemon1.isLucky() ? pokemon1.attackPokemon(pokemon2) : console.log(pokemon1.name + " n'a pas de chance.")
     if(pokemon2.hp <= 0) break
 
+
     console.log(pokemon2.name + " attaque " + pokemon1.name)
-    if(pokemon2.isLucky()) pokemon2.attackPokemon(pokemon1)
-    else console.log(pokemon2.name + " n'a pas de chance.")
+
+    pokemon2.isLucky() ? pokemon2.attackPokemon(pokemon1) : console.log(pokemon2.name + " n'a pas de chance.")
     if(pokemon1.hp <= 0) break
 }
