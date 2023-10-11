@@ -4,23 +4,20 @@ let Tueur = {
     ptsVie: 100
 }
 
+// Création de la classe Caracteristique
+class Caracteristique {
+    constructor(probaMort, probaDegats, probaMortDegats) {
+        this.probaMort = probaMort
+        this.probaDegats = probaDegats
+        this.probaMortDegats = probaMortDegats
+    }
+}
+
 // Création des caractéristiques possibles
 const Caracteristiques = [
-    Nerd = {
-        probaMort: 0.5,
-        probaDegats: 0.3,
-        probaMortDegats: 0.2
-    },
-    Blonde = {
-        probaMort: 0.7,
-        probaDegats: 0.2,
-        probaMortDegats: 0.4
-    },
-    Sportif = {
-        probaMort: 0.2,
-        probaDegats: 0.6,
-        probaMortDegats: 0.2
-    }
+    Nerd = new Caracteristique(0.5, 0.3, 0.2),
+    Blonde = new Caracteristique(0.7, 0.2, 0.4),
+    Sportif = new Caracteristique(0.2, 0.6, 0.2)
 ]
 
 // Création du tableau des prenoms
