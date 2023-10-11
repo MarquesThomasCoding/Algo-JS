@@ -28,7 +28,7 @@ for(let i = trajet.feux; i >= 0; i--) {
         Personnage.sante -= 1
         trajet.changements ++
     }
-    console.log("Musique : " + trajet.radio + "\nFeux restants : " + i + "\nSanté mentale : " + Personnage.sante)
+    console.log("Musique : " + trajet.radio + "\nFeux restants : " + trajet.changements + "\nSanté mentale : " + Personnage.sante)
 
     if(Personnage.sante === 0) {
         console.log("Explosion de John")
