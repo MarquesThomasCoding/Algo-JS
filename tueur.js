@@ -21,35 +21,21 @@ const Caracteristiques = [
     }
 ]
 
-const prenoms = ["Paul", "Karen", "Tim", "Jeffrey", "Marie", "Laura", "Thomas", "Hélène", "Maxime", "Françoise"]
+const prenoms = ["Paul", "Karen", "Tim", "Jeffrey", "Marie", "Laura", "Thomas", "Hélène", "Maxime", "Françoise", "Pierre", "Matt", "Alex", "Mattéo", "Clément", "Victor", "Anne", "Pauline", "Lucie", "Victoria", "Sophie", "Carole", "Elodie"]
 
-let Survivants = [
-    Survivant1 = {
-        prenom: prenoms[Math.floor(Math.random()*prenoms.length)],
-        caracteristique: Caracteristiques[Math.floor(Math.random()*Caracteristiques.length)],
-        mort: false
-    },
-    Survivant2 = {
-        prenom: prenoms[Math.floor(Math.random()*prenoms.length)],
-        caracteristique: Caracteristiques[Math.floor(Math.random()*Caracteristiques.length)],
-        mort: false
-    },
-    Survivant3 = {
-        prenom: prenoms[Math.floor(Math.random()*prenoms.length)],
-        caracteristique: Caracteristiques[Math.floor(Math.random()*Caracteristiques.length)],
-        mort: false
-    },
-    Survivant4 = {
-        prenom: prenoms[Math.floor(Math.random()*prenoms.length)],
-        caracteristique: Caracteristiques[Math.floor(Math.random()*Caracteristiques.length)],
-        mort: false
-    },
-    Survivant5 = {
-        prenom: prenoms[Math.floor(Math.random()*prenoms.length)],
-        caracteristique: Caracteristiques[Math.floor(Math.random()*Caracteristiques.length)],
-        mort: false
+let Survivants = []
+
+createSurvivants = () => {
+    for(let i = 0; i < 5; i++) {
+        Survivants.push({
+            prenom: prenoms[Math.floor(Math.random()*prenoms.length)],
+            caracteristique: Caracteristiques[Math.floor(Math.random()*Caracteristiques.length)],
+            mort: false
+        })
     }
-]
+}
+
+createSurvivants()
 
 let survivantsAlive = 5
 
