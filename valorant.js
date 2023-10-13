@@ -98,12 +98,12 @@ while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
     // Si c'est l'équipe des attaquants qui a été éliminée, +1 au nombre de manches remportées par les défenseurs
     if(attaquants.length === 0) {
         nbManchesdefenseurs++
-        console.log(".\nManche " + manches + " remportée par l'équipe des défenseurs ! Ils sont à " + nbManchesdefenseurs + " manches de gagnées.\n.\n")
+        console.log(".\nManche " + manches + " remportée par l'équipe des défenseurs ! Ils ont gagné " + nbManchesdefenseurs + " manches.\n.\n")
     }
     // Sinon, +1 au nombre de manches remportées par les attaquants
     else {
         nbManchesattaquants++
-        console.log(".\nManche " + manches + " remportée par l'équipe des attaquants ! Ils sont à " + nbManchesattaquants + " manches de gagnées.\n.\n")
+        console.log(".\nManche " + manches + " remportée par l'équipe des attaquants ! Ils ont gagné " + nbManchesattaquants + " manches.\n.\n")
     }
 }
 
