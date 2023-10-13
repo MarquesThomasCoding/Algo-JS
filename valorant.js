@@ -1,8 +1,8 @@
 // Valorant
 
 // Initialisation du nombre de manches gagnées par les attaquants et les défenseurs, et du nombre de manches jouées
-let nbManchesattaquants = 0
-let nbManchesdefenseurs = 0
+let nbManchesAttaquants = 0
+let nbManchesDefenseurs = 0
 let manches = 0
 
 // Initialisation de la variable qui détermine si le spike a été amorcé ou non
@@ -23,7 +23,7 @@ amorceSpike = (proba) => {
 console.log("Le match commence ! Le premier à 13 manches gagnées remporte la victoire !\n.")
 
 // Tant qu'aucune équipe n'a remporté 13 manches, on continue de jouer
-while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
+while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
     // Initialisation des équipes
     let attaquants = ["Omen", "Jett", "Phoenix", "Fade", "Chamber"]
     let defenseurs = ["Omen", "Jett", "Phoenix", "Fade", "Chamber"]
@@ -95,17 +95,17 @@ while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
 
     // Si c'est l'équipe des attaquants qui a été éliminée, +1 au nombre de manches remportées par les défenseurs
     if(attaquants.length === 0) {
-        nbManchesdefenseurs++
-        console.log(".\nManche " + manches + " remportée par l'équipe des défenseurs ! Ils ont gagné " + nbManchesdefenseurs + " manches.\n.\n")
+        nbManchesDefenseurs++
+        console.log(".\nManche " + manches + " remportée par l'équipe des défenseurs ! Ils ont gagné " + nbManchesDefenseurs + " manches.\n.\n")
     }
     // Sinon, +1 au nombre de manches remportées par les attaquants
     else {
-        nbManchesattaquants++
-        console.log(".\nManche " + manches + " remportée par l'équipe des attaquants ! Ils ont gagné " + nbManchesattaquants + " manches.\n.\n")
+        nbManchesAttaquants++
+        console.log(".\nManche " + manches + " remportée par l'équipe des attaquants ! Ils ont gagné " + nbManchesAttaquants + " manches.\n.\n")
     }
 }
 
 // Si ce sont les attaquants qui ont gagné 13 manches, on affiche leur victoire
-if(nbManchesattaquants === 13) console.log(".\nMatch terminé ! L'équipe des attaquants remporte la victoire !")
+if(nbManchesAttaquants === 13) console.log(".\nMatch terminé ! L'équipe des attaquants remporte la victoire !")
 // Sinon on affiche la victoire des défenseurs
 else console.log(".\nMatch terminé ! L'équipe des défenseurs remporte la victoire !")

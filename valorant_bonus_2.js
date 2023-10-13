@@ -1,7 +1,7 @@
 // Valorant bonus 2 (et 1) : Attaque de Jett + Smoke d'Omen
 
-let nbManchesattaquants = 0
-let nbManchesdefenseurs = 0
+let nbManchesAttaquants = 0
+let nbManchesDefenseurs = 0
 let manches = 0
 
 let spike = false
@@ -20,7 +20,7 @@ amorceSpike = (proba) => {
 
 console.log("Le match commence ! Le premier à 13 manches gagnées remporte la victoire !\n.")
 
-while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
+while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
     let attaquants = ["Omen", "Jett", "Phoenix", "Fade", "Chamber"]
     let defenseurs = ["Omen", "Jett", "Phoenix", "Fade", "Chamber"]
 
@@ -84,15 +84,15 @@ while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
     manches++
 
     if(attaquants.length === 0) {
-        nbManchesdefenseurs++
-        console.log(".\nManche " + manches + " remportée par l'équipe des défenseurs ! Ils ont gagné " + nbManchesdefenseurs + " manches.\n.\n")
+        nbManchesDefenseurs++
+        console.log(".\nManche " + manches + " remportée par l'équipe des défenseurs ! Ils ont gagné " + nbManchesDefenseurs + " manches.\n.\n")
     }
     
     else {
-        nbManchesattaquants++
-        console.log(".\nManche " + manches + " remportée par l'équipe des attaquants ! Ils ont gagné " + nbManchesattaquants + " manches.\n.\n")
+        nbManchesAttaquants++
+        console.log(".\nManche " + manches + " remportée par l'équipe des attaquants ! Ils ont gagné " + nbManchesAttaquants + " manches.\n.\n")
     }
 }
 
-if(nbManchesattaquants === 13) console.log(".\nMatch terminé ! L'équipe des attaquants remporte la victoire !")
+if(nbManchesAttaquants === 13) console.log(".\nMatch terminé ! L'équipe des attaquants remporte la victoire !")
 else console.log(".\nMatch terminé ! L'équipe des défenseurs remporte la victoire !")
