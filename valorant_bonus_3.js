@@ -1,4 +1,4 @@
-// Valorant
+// Valorant bonus 3 (et 1 et 2) : Attaque de Jett, Smoke d'Omen et Flash de Phoenix
 
 let nbManchesattaquants = 0
 let nbManchesdefenseurs = 0
@@ -6,7 +6,7 @@ let manches = 0
 
 let spike = false
 
-console.log("Le match commence ! Le premier à 13 manches de gagnées remporte la victoire !\n.")
+console.log("Le match commence ! Le premier à 13 manches gagnées remporte la victoire !\n.")
 
 while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
     let attaquants = ["Omen", "Jett", "Phoenix", "Fade", "Chamber"]

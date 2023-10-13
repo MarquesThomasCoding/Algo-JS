@@ -1,4 +1,4 @@
-// Valorant
+// Valorant bonus 1 : Attaque de Jett
 
 let nbManchesattaquants = 0
 let nbManchesdefenseurs = 0
@@ -6,7 +6,7 @@ let manches = 0
 
 let spike = false
 
-console.log("Le match commence ! Le premier à 13 manches de gagnées remporte la victoire !\n.")
+console.log("Le match commence ! Le premier à 13 manches gagnées remporte la victoire !\n.")
 
 while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
     let attaquants = ["Omen", "Jett", "Phoenix", "Fade", "Chamber"]
