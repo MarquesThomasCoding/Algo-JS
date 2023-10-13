@@ -8,7 +8,7 @@ let manches = 0
 // Initialisation de la variable qui détermine si le spike a été amorcé ou non
 let spike = false
 
-console.log("Le match commence ! Le premier à 13 manches de gagnées remporte la victoire !\n.")
+console.log("Le match commence ! Le premier à 13 manches gagnées remporte la victoire !\n.")
 
 // Tant qu'aucune équipe n'a remporté 13 manches, on continue de jouer
 while(nbManchesattaquants < 13 && nbManchesdefenseurs < 13) {
