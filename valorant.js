@@ -13,14 +13,14 @@ amorceSpike = (proba) => {
     let rdmSpike = Math.random()
     if(rdmSpike < proba) {
         spike = true
-        console.log("Le spike a été amorcé")
+        console.log("♠️ Le spike a été amorcé")
     }
     else {
-        console.log("Le spike n'a pas été amorcé")
+        console.log("♠️ Le spike n'a pas été amorcé")
     }
 }
 
-console.log("Le match commence ! Le premier à 13 manches gagnées remporte la victoire !\n.")
+console.log("⚔️ Le match commence ! Le premier à 13 manches gagnées remporte la victoire !\n.")
 
 // Tant qu'aucune équipe n'a remporté 13 manches, on continue de jouer
 while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
@@ -37,7 +37,7 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
     if(rdmEquipe < 0.5) {
         // On retire le joueur éliminé de l'équipe des défenseurs, et on l'affiche dans la console
         defenseurs.splice(defenseurs.indexOf(defenseur), 1)
-        console.log(defenseur + ", des défenseurs, a été éliminé par " + attaquant + ". Encore " + defenseurs.length + " joueurs dans cette équipe.")
+        console.log("☠️ " + defenseur + ", des défenseurs, a été éliminé par " + attaquant + ". Encore " + defenseurs.length + " joueurs dans cette équipe.")
 
         // On appelle la fonction amorceSpike avec la bonne probabilité
         amorceSpike(0.6)
@@ -46,7 +46,7 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
     else {
         // On retire le joueur éliminé de l'équipe des attaquants, et on l'affiche dans la console
         attaquants.splice(attaquants.indexOf(attaquant), 1)
-        console.log(attaquant + ", des attaquants, a été éliminé par " + defenseur + ". Encore " + attaquants.length + " joueurs dans cette équipe.")
+        console.log("☠️ " + attaquant + ", des attaquants, a été éliminé par " + defenseur + ". Encore " + attaquants.length + " joueurs dans cette équipe.")
 
         // On appelle la fonction amorceSpike avec la bonne probabilité
         amorceSpike(0.4)
@@ -66,12 +66,12 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
             if(rdmProbaOfVictory < 0.7) {
                 // On retire le joueur éliminé de l'équipe des défenseurs, et on l'affiche dans la console
                 defenseurs.splice(defenseurs.indexOf(defenseur), 1)
-                console.log(defenseur + ", des défenseurs, a été éliminé par " + attaquant + ". Encore " + defenseurs.length + " joueurs dans cette équipe.")
+                console.log("☠️ " + defenseur + ", des défenseurs, a été éliminé par " + attaquant + ". Encore " + defenseurs.length + " joueurs dans cette équipe.")
             }
             else {
                 // On retire le joueur éliminé de l'équipe des attaquants, et on l'affiche dans la console
                 attaquants.splice(attaquants.indexOf(attaquant), 1)
-                console.log(attaquant + ", des attaquants, a été éliminé par " + defenseur + ". Encore " + attaquants.length + " joueurs dans cette équipe.")
+                console.log("☠️ " + attaquant + ", des attaquants, a été éliminé par " + defenseur + ". Encore " + attaquants.length + " joueurs dans cette équipe.")
             }
         }
 
@@ -80,12 +80,12 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
             if(rdmProbaOfVictory < 0.5) {
                 // On retire le joueur éliminé de l'équipe des défenseurs, et on l'affiche dans la console
                 defenseurs.splice(defenseurs.indexOf(defenseur), 1)
-                console.log(defenseur + ", des défenseurs, a été éliminé par " + attaquant  + ". Encore " + defenseurs.length + " joueurs dans cette équipe.")
+                console.log("☠️ " + defenseur + ", des défenseurs, a été éliminé par " + attaquant  + ". Encore " + defenseurs.length + " joueurs dans cette équipe.")
             }
             else {
                 // On retire le joueur éliminé de l'équipe des attaquants, et on l'affiche dans la console
                 attaquants.splice(attaquants.indexOf(attaquant), 1)
-                console.log(attaquant + ", des attaquants, a été éliminé par " + defenseur + ". Encore " + attaquants.length + " joueurs dans cette équipe.")
+                console.log("☠️ " + attaquant + ", des attaquants, a été éliminé par " + defenseur + ". Encore " + attaquants.length + " joueurs dans cette équipe.")
             }
         }
     }
@@ -96,16 +96,16 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
     // Si c'est l'équipe des attaquants qui a été éliminée, +1 au nombre de manches remportées par les défenseurs
     if(attaquants.length === 0) {
         nbManchesDefenseurs++
-        console.log(".\nManche " + manches + " remportée par l'équipe des défenseurs ! Ils ont gagné " + nbManchesDefenseurs + " manches.\n.\n")
+        console.log(".\n🎉 Manche " + manches + " remportée par l'équipe des défenseurs ! Ils ont gagné " + nbManchesDefenseurs + " manches.\n.\n")
     }
     // Sinon, +1 au nombre de manches remportées par les attaquants
     else {
         nbManchesAttaquants++
-        console.log(".\nManche " + manches + " remportée par l'équipe des attaquants ! Ils ont gagné " + nbManchesAttaquants + " manches.\n.\n")
+        console.log(".\n🎉 Manche " + manches + " remportée par l'équipe des attaquants ! Ils ont gagné " + nbManchesAttaquants + " manches.\n.\n")
     }
 }
 
 // Si ce sont les attaquants qui ont gagné 13 manches, on affiche leur victoire
-if(nbManchesAttaquants === 13) console.log(".\nMatch terminé ! L'équipe des attaquants remporte la victoire !")
+if(nbManchesAttaquants === 13) console.log(".\n🎉 Match terminé ! L'équipe des attaquants remporte la victoire !")
 // Sinon on affiche la victoire des défenseurs
-else console.log(".\nMatch terminé ! L'équipe des défenseurs remporte la victoire !")
+else console.log(".\n🎉 Match terminé ! L'équipe des défenseurs remporte la victoire !")
