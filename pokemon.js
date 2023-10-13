@@ -36,7 +36,7 @@ while(pokemon1.hp > 0 && pokemon2.hp > 0) {
     console.log(pokemon1.name + " attaque " + pokemon2.name)
 
     // On vérifie si le pokemon1 est chanceux, si oui, on attaque le pokemon2, sinon on affiche qu'il n'a pas de chance
-    pokemon1.isLucky() ? pokemon1.attackPokemon(pokemon2) : console.log(pokemon1.name + " n'a pas de chance et ne conclu pas son attaque.")
+    pokemon1.isLucky() ? pokemon1.attackPokemon(pokemon2) : console.log(pokemon1.name + " n'a pas de chance.")
     // Si le pokemon2 est mort, on arrête la boucle
     if(pokemon2.hp <= 0) break
 
@@ -44,7 +44,7 @@ while(pokemon1.hp > 0 && pokemon2.hp > 0) {
     console.log(pokemon2.name + " attaque " + pokemon1.name)
 
     // On vérifie si le pokemon2 est chanceux, si oui, on attaque le pokemon1, sinon on affiche qu'il n'a pas de chance
-    pokemon2.isLucky() ? pokemon2.attackPokemon(pokemon1) : console.log(pokemon2.name + " n'a pas de chance et ne conclu pas son attaque.")
+    pokemon2.isLucky() ? pokemon2.attackPokemon(pokemon1) : console.log(pokemon2.name + " n'a pas de chance")
     // Si le pokemon1 est mort, on arrête la boucle
     if(pokemon1.hp <= 0) break
 }
