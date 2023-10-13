@@ -16,7 +16,9 @@ while(nbManchesEquipe1 < 13 && nbManchesEquipe2 < 13) {
     let player1 = equipe1[Math.floor(Math.random()*equipe1.length)]
     let player2 = equipe2[Math.floor(Math.random()*equipe2.length)]
 
-    if(rdmEquipe < 0.5) {
+    let rdmJettAttack = Math.random()
+
+    if((manches % 3 === 0 && player1 === "Jett" && rdmJettAttack < 0.8) || rdmEquipe < 0.5) {
         equipe2.splice(equipe2.indexOf(player2), 1)
         console.log(player2 + ", des défenseurs, a été éliminé par " + player1 + ". Encore " + equipe2.length + " joueurs dans cette équipe.")
 
@@ -43,11 +45,15 @@ while(nbManchesEquipe1 < 13 && nbManchesEquipe2 < 13) {
         }
     }
 
+    let probaOfVictory = 0.5
+
     while(equipe1.length != 0 && equipe2.length != 0) {
         let player1 = equipe1[Math.floor(Math.random()*equipe1.length)]
         let player2 = equipe2[Math.floor(Math.random()*equipe2.length)]
 
         let rdmProbaOfVictory = Math.random()
+
+        let rdmOmenSmoke = Math.random()
 
         if(spike) {
             if(rdmProbaOfVictory < 0.7) {
@@ -61,7 +67,12 @@ while(nbManchesEquipe1 < 13 && nbManchesEquipe2 < 13) {
         }
 
         else {
-            if(rdmProbaOfVictory < 0.5) {
+            if(player1 === "Omen" && rdmOmenSmoke < 0.5) {
+                probaOfVictory = 0.6
+                console.log("Omen lance une smoke !")
+            }
+
+            if(rdmProbaOfVictory < probaOfVictory) {
                 equipe2.splice(equipe2.indexOf(player2), 1)
                 console.log(player2 + ", des défenseurs, a été éliminé par " + player1  + ". Encore " + equipe2.length + " joueurs dans cette équipe.")
             }
