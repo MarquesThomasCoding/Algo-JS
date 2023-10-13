@@ -58,14 +58,14 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
         if(spike) probaOfVictory = 0.7
 
         if(attaquant === "Phoenix" && rdmPhoenixFlash < 0.5) {
-            console.log("Phoenix lance une flash !")
+            console.log("🔆 Phoenix lance une flash !")
             if(chanceOfBlind < 0.8) {
                 probaOfVictory = 0.6
-                console.log("Sa flash aveugle les ennemis !")
+                console.log("🔆 Sa flash aveugle les ennemis !")
             }
             else {
                 probaOfVictory = 0.3
-                console.log("Sa flash aveugle ses alliés !")
+                console.log("🔆 Sa flash aveugle ses alliés !")
             }
         }
 
@@ -83,7 +83,7 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
         else {
             if(attaquant === "Omen" && rdmOmenSmoke < 0.5) {
                 probaOfVictory = 0.6
-                console.log("Omen lance une smoke !")
+                console.log("💣 Omen lance une smoke !")
             }
 
             if(rdmProbaOfVictory < probaOfVictory) {

@@ -67,7 +67,7 @@ while(nbManchesAttaquants < 13 && nbManchesDefenseurs < 13) {
         else {
             if(attaquant === "Omen" && rdmOmenSmoke < 0.5) {
                 probaOfVictory = 0.6
-                console.log("Omen lance une smoke !")
+                console.log("💣 Omen lance une smoke !")
             }
 
             if(rdmProbaOfVictory < probaOfVictory) {
